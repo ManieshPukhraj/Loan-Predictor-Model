@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body{
+            background-image: url('bg1.jpg');
+        }
+    </style>
+    </head>
+    <body>
+        <h2>
+            Bank Loan Defaulter Prediction
+        </h2>
+        <div>
+            <form action="/predict" method="POST">
+                <label for="Loan Amount">Loan amount</label>
+                <input type="text" id="Loan Amount" name="Loan Amount">
+                <br>
+                <label for="Funded Amount">Funded amount</label>
+                <input type="text" id="Funded Amount" name="Funded Amount">
+                <br>
+                <label for="Funded Amount Investor">Funded amount investor</label>
+                <input type="text" id="Funded Amount Investor" name="Funded Amount Investor">
+                <br>
+                <label for="Interest rate">Interest rate</label>
+                <input type="Interest rate" id="Interest rate" name="Interest rate">
+                <br>
+                <label for="Grade">Grade</label>
+                <select id="Grade" name="Grade">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                </select>
+                <br>
+                <label for="Sub grade">Sub grade</label>
+                <select id="Sub grade" name="Sub grade">
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+                <option value="A4">A4</option>
+                <option value="A5">A5</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="B4">B4</option>
+                <option value="B5">B5</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
+                <option value="C3">C3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="D1">D1</option>
+                <option value="D2">D2</option>
+                <option value="D3">D3</option>
+                <option value="D4">D4</option>
+                <option value="D5">D5</option>
+                <option value="E1">E1</option>
+                <option value="E2">E2</option>
+                <option value="E3">E3</option>
+                <option value="E4">E4</option>
+                <option value="E5">E5</option>
+                <option value="F1">F1</option>
+                <option value="F2">F2</option>
+                <option value="F3">F3</option>
+                <option value="F4">F4</option>
+                <option value="F5">F5</option>
+                <option value="G1">G1</option>
+                <option value="G2">G2</option>
+                <option value="G3">G3</option>
+                <option value="G4">G4</option>
+                <option value="G5">G5</option>
+                </select>
+                <br>
+                <label for="Employment duration">Employment duration</label>
+                <select id="Employment duration" name="Employment duration">
+                <option value="Mortgage">Mortgage</option>
+                <option value="Rent">Rent</option>
+                <option value="Own">Own</option>
+                </select>
+                <br>
+                <label for="Home ownership">Home ownership</label>
+                <input type="text" id="Home ownership" name="Home ownership">
+                <br>
+                <label for="Verification status">Verification status</label>
+                <select id="Verification status" name="Verification status">
+                <option value="Not Verified">Not Verified</option>
+                <option value="Source Verified">Source Verified</option>
+                <option value="Verified">Verified</option>
+                </select>
+                <br>
+                <label for="Debit to income">Debit to income</label>
+                <input type="text" id="Debit to income" name="Debit to income">
+                <br>
+                <label for="Open Account">Open Account</label>
+                <input type="text" id="Open Account" name="Open Account">
+                <br>
+                <label for="Revolving Utilities">Revolving Utilities</label>
+                <input type="text" id="Revolving Utilities" name="Revolving Utilities">
+                <br>
+                <label for="Total Accounts">Total Accounts</label>
+                <input type="text" id="Total Accounts" name="Total Accounts">
+                <br>
+                
+                <label for="Last week Pay">Last week Pay</label>
+                <input type="text" id="Last week Pay" name="Last week Pay">
+                <br>
+                <label for="Total Revolving Credit Limit">Total Revolving Credit Limit</label>
+                <input type="text" id="Total Revolving Credit Limit" name="Total Revolving Credit Limit">
+                <br>
+                <label for="Initial List Status">Initial List Status</label>
+                <select id="Initial List Status" name="Initial List Status">
+                <option value="Forwarded">Forwarded</option>
+                <option value="Waiting">Waiting</option>
+                </select>
+                <br>
+                <label for="Model">Model</label>
+                <select id="Model" name="Model">
+                    <option value="rfc">Random Forest Classifier</option>
+                    <option value="logreg">Logistic Regression</option>
+                </select>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+            <br>
+            {{pred_text}}
+        </div>
+    </body>
+</html>
